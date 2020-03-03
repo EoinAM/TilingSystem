@@ -2,6 +2,10 @@
 
 const int MS_PER_UPDATE{ 10 };
 
+/// <summary>
+/// Game Constructor
+/// Calls the L:oad feature for all the Tile Sprites
+/// </summary>
 
 Game::Game() :
 	m_window(sf::VideoMode(GlobalSettings::s_width, GlobalSettings::s_height, 32), "UI Library", sf::Style::Default),
@@ -63,5 +67,6 @@ void Game::update(double t_dt)
 void Game::render()
 {
 	m_window.clear(sf::Color::Red);
+	m_builder.render();
 	m_window.display();
 }// !render
